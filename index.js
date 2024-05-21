@@ -4,7 +4,9 @@ new Vue({
 
     data: {
 
-        numbers: ''
+        numbers: '',
+
+        cursorPosition: 0
 
     },
 
@@ -25,7 +27,7 @@ new Vue({
         clearLast() {
 
             this.numbers = this.numbers.slice(0, -1);
-            
+
         },
 
         calculate() {
