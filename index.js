@@ -1,12 +1,10 @@
-import Vue from 'vue';
-
 new Vue({
 
     el: '#calculator',
 
     data: {
 
-        numbers: '',
+        numbers: ''
 
     },
 
@@ -23,6 +21,20 @@ new Vue({
             this.numbers = '';
 
         },
+
+        calculate() {
+
+            try {
+
+                this.numbers = eval(this.numbers);
+
+            } catch (e) {
+
+                this.numbers = 'Syntax Error';
+
+            }
+
+        }
 
     },
 
