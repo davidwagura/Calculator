@@ -22,6 +22,12 @@ new Vue({
 
         },
 
+        clearLast() {
+
+            this.numbers = this.numbers.slice(0, -1);
+            
+        },
+
         calculate() {
 
             try {
@@ -34,7 +40,7 @@ new Vue({
 
             }
 
-        }
+        },
 
     },
 
