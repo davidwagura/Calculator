@@ -1,64 +1,3 @@
-button {
-
-    width: 100px;
-
-    height: 108px;
-
-    border-radius: 50px;
-
-    border: none;
-
-    background-color: hsl(0, 0%, 30%);
-
-    color: white;
-
-    font-size: 3rem;
-
-    font-weight: bold;
-
-    cursor: pointer;
-}
-
-#keys {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 10px;
-
-    padding: 25px;
-}
-
-#calculator {
-
-    font-family: Arial, sans-serif;
-
-    background-color: hsl(0, 0%, 15%);
-
-    border-radius: 15px;
-
-    max-width: 500px;
-
-    overflow: hidden;
-}
-
-#display {
-
-    width: 100%;
-
-    padding: 20px;
-
-    font-size: 5rem;
-
-    text-align: left;
-
-    border: none;
-
-    background-color: hsl(0, 0%, 30%);
-
-}
-
 body {
 
     margin: 0;
@@ -69,11 +8,87 @@ body {
 
     align-items: center;
 
-    height: screen;
-
-    margin: 1rem;
+    height: 100vh;
 
     background-color: hsl(0, 0%, 95%);
+
+    font-family: Arial, sans-serif;
+
+}
+
+#calculator {
+
+    background-color: hsl(0, 0%, 15%);
+
+    border-radius: 15px;
+
+    max-width: 90%;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 20px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+
+    width: 100%;
+
+    padding: 10px;
+
+    font-size: 2.5rem;
+
+    text-align: left;
+
+    border: none;
+
+    background-color: hsl(0, 0%, 30%);
+
+    color: white;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+#keys {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+}
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    background-color: hsl(0, 0%, 30%);
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: background-color 0.3s;
+
 }
 
 button:hover {
@@ -97,15 +112,52 @@ button:active {
 .operator-btn:hover {
 
     background-color: hsl(35, 100%, 65%);
-    
+
 }
 
 .operator-btn:active {
 
     background-color: hsl(35, 100%, 75%);
-    
+
 }
 
+@media (min-width: 600px) {
 
+    #calculator {
 
+        max-width: 400px;
+    }
 
+    #display {
+
+        font-size: 3rem;
+
+    }
+
+    button {
+
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #calculator {
+
+        max-width: 500px;
+
+    }
+
+    #display {
+
+        font-size: 4rem;
+
+    }
+
+    button {
+
+        font-size: 2.5rem;
+
+    }
+    
+}
